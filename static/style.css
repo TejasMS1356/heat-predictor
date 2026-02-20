@@ -1,0 +1,45 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #f2f2f2;
+}
+
+h1 {
+    margin: 20px;
+}
+
+.controls {
+    margin: 20px;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+    width: 150px;
+}
+
+button {
+    padding: 8px 15px;
+    background: #ff5733;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c70039;
+}
+
+#map {
+    height: 550px;
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#statusBox {
+    margin: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
