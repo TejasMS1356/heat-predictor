@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>India AI Heat Risk Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <h1>🔥 India AI Heat Risk Monitoring System</h1>
+
+    <div class="controls">
+        <select id="citySelect">
+            <option value="">-- Select City for Manual Input --</option>
+            {% for city in cities %}
+            <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+        <input type="number" id="temp" placeholder="Max Temp (°C)">
+        <input type="number" id="humidity" placeholder="Humidity (%)">
+        <input type="number" id="wind" placeholder="Wind (km/h)">
+        <input type="number" id="pressure" placeholder="Pressure (hPa)">
+        <label>
+            <input type="checkbox" id="useManual"> Use manual values for selected city
+        </label>
+        <button onclick="predictAll()">Analyze India</button>
+    </div>
+
+    <div id="statusBox"></div>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
